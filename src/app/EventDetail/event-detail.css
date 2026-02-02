@@ -1,0 +1,26 @@
+.event-detail{
+  max-width:900px;
+  margin:auto;
+  padding:32px;
+}
+
+.event-detail h1{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.event-desc{
+  margin-bottom:24px;
+}
+
+.event-detail section{
+  margin-bottom:20px;
+}
+
+.event-detail ul{
+  padding-left:18px;
+}
+
+.event-detail li{
+  margin-bottom:6px;
+}
