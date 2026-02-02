@@ -1,0 +1,36 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Variables */
+:root {
+  --bg-color: #0e1117;
+  --text-color: #e6edf3;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Base Layout */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+/* App Root */
+#app-root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
