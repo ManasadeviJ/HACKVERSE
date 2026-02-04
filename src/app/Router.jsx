@@ -1,7 +1,7 @@
 import React from "react"
 import {BrowserRouter,Routes,Route,Navigate} from "react-router-dom"
-import Login from "./Login/Login"
-import Dashboard from "./Dashboard/Dashboard"
+import Login from "../pages/Login/Login"
+import Dashboard from "../pages/Dashboard/Dashboard"
 import useGameState from "../hooks/useGameState"
 
 export default function Router(){
