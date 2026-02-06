@@ -1,0 +1,38 @@
+.footer-section {
+  padding: 70px 20px 40px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-item h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer-item p {
+  font-size: 13px;
+  color: #ddd;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 700px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

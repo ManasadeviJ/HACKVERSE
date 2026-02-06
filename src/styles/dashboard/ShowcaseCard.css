@@ -1,0 +1,42 @@
+.showcase-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+}
+
+.showcase-image {
+  height: 120px;
+  background: #eee;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease;
+}
+
+.showcase-card:hover .showcase-image {
+  transform: scale(1.05);
+}
+
+.showcase-card h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.showcase-fee {
+  font-size: 12px;
+  color: #e60023;
+  font-weight: 600;
+}
+
+/* Join button */
+.join-btn {
+  margin-top: 14px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}

@@ -1,0 +1,92 @@
+/* ===== HERO WRAPPER ===== */
+
+.hero-wrapper {
+  padding: 24px 0 60px;
+}
+
+/* ===== NAVBAR ===== */
+
+.hero-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links li {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.nav-links .active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.search-input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+/* ===== HERO CONTENT ===== */
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.hero-image {
+  height: 300px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #1f1f1f,
+    #444
+  );
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    height: 240px;
+  }
+
+  .nav-links {
+    display: none; /* mobile: hide links */
+  }
+
+  .search-input {
+    display: none;
+  }
+}

@@ -6,6 +6,7 @@ import useGameState from "../hooks/useGameState"
 
 export default function Router(){
   const loggedIn=useGameState(s=>s.loggedIn)
+  console.log("LOGGED IN:", loggedIn)
 
   return(
     <BrowserRouter>

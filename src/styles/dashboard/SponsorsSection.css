@@ -1,0 +1,49 @@
+.sponsors-section {
+  margin-bottom: 90px;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+/* Marquee container */
+.sponsors-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Moving track */
+.sponsors-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+/* Sponsor card */
+.sponsor-card {
+  min-width: 220px;
+  background: #111;
+  color: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: default;
+}
+
+/* Pause animation on hover */
+.sponsors-marquee:hover .sponsors-track {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .sponsor-card {
+    min-width: 180px;
+    padding: 18px;
+  }
+}

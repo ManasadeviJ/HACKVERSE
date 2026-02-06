@@ -1,0 +1,27 @@
+.showcase-section {
+  margin-bottom: 100px;
+}
+
+.section-title {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}

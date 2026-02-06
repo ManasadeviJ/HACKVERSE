@@ -1,0 +1,20 @@
+.hackathon-section {
+  margin-bottom: 90px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.hackathon-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.hackathon-scroll::-webkit-scrollbar {
+  display: none;
+}

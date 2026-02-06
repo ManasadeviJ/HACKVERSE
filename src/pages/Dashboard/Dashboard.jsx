@@ -1,25 +1,25 @@
-import React from "react"
-import TeamPanel from "../../ui/panels/TeamPanel"
-import SubmissionPanel from "../../ui/panels/SubmissionPanel"
-import ResultsPanel from "../../ui/panels/ResultsPanel"
-import Button from "../../ui/components/Button"
-import "./Dashboard.css"
+import React from "react";
 
-export default function Dashboard(){
-  return(
-    <div className="dashboard-container">
+import DashboardLayout from "../../ui/layout/DashboardLayout";
 
-      <header className="dashboard-header">
-        <h1>Hackathon Dashboard</h1>
-        <Button>Join Event</Button>
-      </header>
+import HeroSection from "../../ui/dashboard/HeroSection";
+import StatsSection from "../../ui/dashboard/StatsSection";
+import HackathonSection from "../../ui/dashboard/HackathonSection";
+import SponsorsSection from "../../ui/dashboard/SponsorsSection";
+import ShowcaseSection from "../../ui/dashboard/ShowcaseSection";
+import FooterSection from "../../ui/dashboard/FooterSection";
 
-      <section className="dashboard-grid">
-        <TeamPanel/>
-        <SubmissionPanel/>
-        <ResultsPanel/>
-      </section>
+import "../../styles/dashboard/dashboard.css";
 
-    </div>
-  )
+export default function Dashboard() {
+  return (
+    <DashboardLayout>
+      <HeroSection />
+      <StatsSection />
+      <HackathonSection />
+      <SponsorsSection />
+      <ShowcaseSection />
+      <FooterSection />
+    </DashboardLayout>
+  );
 }
