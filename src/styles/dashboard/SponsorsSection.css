@@ -1,49 +1,142 @@
-.sponsors-section {
-  margin-bottom: 90px;
-  overflow: hidden;
-}
-
-.section-title {
-  font-size: 26px;
-  margin-bottom: 24px;
-}
-
-/* Marquee container */
-.sponsors-marquee {
-  position: relative;
+.sponsors-container {
+  padding: 60px 0;
   width: 100%;
   overflow: hidden;
+  background: transparent;
 }
 
-/* Moving track */
-.sponsors-track {
+.sponsors-header {
   display: flex;
-  gap: 24px;
-  width: max-content;
+  align-items: center;
+  /* padding: 0 5%; */
+  gap: 15px;
+  margin-bottom: 40px;
 }
 
-/* Sponsor card */
-.sponsor-card {
-  min-width: 220px;
-  background: #111;
+.sponsors-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nav-btn {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+  color: #000;
+}
+
+.nav-btn:hover {
+  background: #000;
   color: #fff;
-  padding: 22px;
-  border-radius: 16px;
-  text-align: center;
+}
+
+/* TRACK LOGIC */
+.carousel-wrapper {
+  display: flex;
+  padding-left: 5%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px; /* Increased base gap */
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+}
+
+/* BASE CARD STYLE */
+.sponsor-card {
+  min-width: 300px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease, background-color 0.6s ease, opacity 0.6s ease, min-width 0.6s ease, margin 0.6s ease;
+  
+  /* Diagonal Sharpness: Curvy Top-Right & Bottom-Left */
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* SIDE CARDS (Smaller, Lighter, Compact) */
+.side-card {
+  background-color: #333333;
+  transform: scale(0.8);
+  opacity: 0.5;
+  min-width: 260px;
+  margin: 0;
+}
+
+/* ACTIVE MIDDLE CARDS (Darker, Bigger, Spaced Out) */
+.active-card {
+  background-color: #000000;
+  transform: scale(1.1);
+  opacity: 1;
+  min-width: 300px;
+  z-index: 5;
+  /* Added space specifically between the two darker cards */
+  margin: 0 15px; 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTENT STYLING */
+.category-tag {
+  color: #00FF66;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.enhance-text {
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.brand-layout {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-logo {
+  width: 45px;
+  filter: brightness(0) invert(1);
+}
+
+.brand-name {
+  color: white;
+  font-size: 18px;
   font-weight: 500;
-  white-space: nowrap;
-  cursor: default;
 }
 
-/* Pause animation on hover */
-.sponsors-marquee:hover .sponsors-track {
-  animation-play-state: paused;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .carousel-track {
+    gap: 20px;
+  }
   .sponsor-card {
-    min-width: 180px;
-    padding: 18px;
+    min-width: 200px;
+    height: 140px;
+  }
+  .side-card {
+    min-width: 150px;
+  }
+  .active-card {
+    margin: 0 5px;
   }
 }

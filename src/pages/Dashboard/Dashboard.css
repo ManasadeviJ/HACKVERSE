@@ -1,28 +1,258 @@
-.dashboard-container{
-  padding:32px;
+/* =========================
+   GLOBAL DASHBOARD STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
 }
 
-.dashboard-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:24px;
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #eaeaea;
+  color: #111;
 }
 
-.dashboard-header h1{
-  font-size:26px;
+/* =========================
+   LAYOUT
+========================= */
+
+.dashboard-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.dashboard-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 70px;
 }
 
-@media(max-width:600px){
-  .dashboard-header{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.hero-image {
+  flex: 1;
+  height: 260px;
+  background: linear-gradient(135deg, #222, #555);
+  border-radius: 16px;
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+.stat-card {
+  background: #111;
+  color: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.stat-card h2 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.stat-card p {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* =========================
+   HACKATHON SECTION
+========================= */
+
+.hackathon-section {
+  margin-bottom: 80px;
+}
+
+.hackathon-section h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.hackathon-grid {
+  display: flex;
+  gap: 24px;
+}
+
+/* Hackathon Card */
+
+.hackathon-card {
+  width: 180px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.hackathon-card:hover {
+  transform: translateY(-6px);
+}
+
+.hackathon-avatar {
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+}
+
+.hackathon-card h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.hackathon-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* =========================
+   SPONSORS SECTION
+========================= */
+
+.sponsors-section {
+  margin-bottom: 80px;
+}
+
+.sponsors-section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.sponsors-row {
+  display: flex;
+  gap: 20px;
+}
+
+.sponsor-item {
+  flex: 1;
+  background: #111;
+  color: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* =========================
+   SHOWCASE SECTION
+========================= */
+
+.showcase-section {
+  margin-bottom: 80px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 4fr);
+  gap: 24px;
+}
+
+/* Showcase Card */
+
+.showcase-card {
+  padding: 18px;
+  border-radius: 16px;
+  transition: transform 0.2s ease;
+  height: ;
+}
+
+.showcase-card:hover {
+  transform: translateY(-6px);
+}
+
+.showcase-image {
+  height: 120px;
+  /* background: #eee; */
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.showcase-card h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.showcase-card span {
+  font-size: 12px;
+  color: #e60023;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER SECTION
+========================= */
+
+.footer-section {
+  padding: 50px 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.footer-section p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hackathon-grid {
+    flex-direction: column;
   }
 }
